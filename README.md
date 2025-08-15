@@ -1,12 +1,9 @@
-T4A 
+T4A: A Course on Operating Systems and Programming Languages
 ===
 
 Right now, this is just an idea for attracting new contributors to Oils.
 
 ---
-
-*A Theory- and Action-Oriented Course on Operating Systems and Programming
-Languages*
 
 This course is:
 
@@ -51,12 +48,14 @@ The goal is to learn the concept/theory, rather than the specific technology.
     reasoning, not just making things work for the happy path.
   - Some basic familiarity with operating systems and C.  
 
-## Two Quick Questions
+## Two Questions
 
 These two questions might help you figure out if you want to spend time on
 this.
 
 ### 1. Normalize a Unix Path
+
+In this git repo, create a Python file `solutions/readme_path.py`.
 
 Write a Python function to normalize a Unix path (without using the
 standard library).
@@ -69,17 +68,43 @@ Example:
       # fill this in
       return ''
 
-
 Hint: split the string by `/`, and use a list as a stack.
 
-Write short unit tests that ensure the function is defined for ALL kinds of
+Write short unit tests that ensure the function is defined for **all** kinds of
 inputs.  You can also restrict inputs with assertions.
 
-### 2.
+<!-- this tests data structures and coding skills -->
 
-(Note: these two questions test *interior* and *exterior* reasoning)
+### Create Bugs in C
+
+Start with this shell to create and run a C program:
+
+    $ echo 'int main() { return 42; }' > foo.c
+
+    $ gcc -o foo foo.c; ./foo; echo status=$?
+    status=42
+
+Now add this flag to enable [Address Sanitizer][asan]:
+
+    $ gcc -fsanitize=address -o foo foo.c && ./foo; echo status=$?
+    status=42
+
+Create a new program with a **bug**:
+
+    $ echo 'int main(int argc, char** argv) { if( *(argv[1]) ) return 1; return 42; }' > foo.c
+
+Now create a shell script `solutions/readme_c.sh`, with  2 lines of shell:
+
+1. One where the bug happens
+1. One where the bug does NOT happen
+
+<!-- this tests shell tool usage and reading C, but not writing C -->
+
+### Publish Results
+
+Create a branch `solutions-$YOURNAME`, and add `solutions/readme_*`, and `git
+push`.
 
 ## Topics
 
-See [outline.md][].
-
+See [outline.md]().

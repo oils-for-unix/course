@@ -17,6 +17,8 @@ Reverse order.  We don't start with lexing and parsing; we *end* with parsing an
 
 ## Interior Topics
 
+### Memory Safety / ASAN
+
 ### Garbage Collection
 
 ### Dictionary Data Structure
