@@ -3,34 +3,43 @@ T4A: A Course on Operating Systems and Programming Languages
 
 Right now, this is just an idea for attracting new contributors to Oils.
 
+(Should the course also be about writing?  I think writing helps spread the
+word.  And I also think that, contrary to some opinions, writing is objective.
+
+Typical problem: there could be too much material that takes too long.
+)
+
 ---
 
-This course is:
+T4A stands for "theory and four actions".  This course is:
 
-- *Theory-oriented* - we introduce concepts with *words*, aiming to give
-  **crisp definitions** that are *invariant* across technologies.
-  - That is, this course will use shell, Python, and C, but the ideas are
-    **not** specific to those technologies.
-  - If you feel overwhelmed by the "tech treadmill", learning theory can be an
-    antidote.
-  - These words and concepts that can aid communication with other engineers
-    (and with LLMs, in certain cases).
-- *Action-oriented* - you can't learn just by reading!  Reading is too passive;
-  knowledge must be tested.
-  - We use **Unix shell** to express and test our actions.
-  - Another way to test your understanding is to **write** for an audience.
-
-T4A stands for "theory and four actions":
-
-- We introduce the theory
-- Then we use **two** different technologies, invoked from shell, to type the **wrong**
-  thing first, and then we come up with the **right** thing.  So that's a total of 4 actions:
+- *Theory-oriented*
+  - We introduce concepts with *words*, aiming to give **crisp definitions**
+    that are *invariant* across technologies.
+- Then we aim to express **four** actions using **Unix shell**
+  - We may use **two** different technologies, like Python and C.  First we
+    type the **wrong** thing, and then we come up with the **right** thing.  So
+    that's a total of 4 actions:
   - (A, wrong)
   - (A, right)
   - (B, wrong)
   - (B, right)
+- Another way to test your understanding is to **write** for an audience.
 
 The goal is to learn the concept/theory, rather than the specific technology.
+
+Notes:
+
+- On theory:
+  - This course will use shell, Python, and C, but the ideas are **not**
+    specific to those technologies.
+  - If you feel overwhelmed by the "tech treadmill", learning theory can be an
+    antidote.
+  - These words and concepts that can aid communication with other engineers
+    (and with LLMs, in certain cases).
+- On action:
+  - You can't learn just by reading!  Reading is too passive; knowledge must be
+    tested.
 
 ## Prerequisites
 
@@ -79,13 +88,16 @@ least 3 lines of shell:
 
 1. Tickle the bug with ASAN on.
 1. Tickle the bug without ASAN.
-1. Avoid the bug
+1. Run the program in a way that avoids the bug.
 
 Conceptual questions / writing:
 
 1. What's the symptom of the bug called, from the perspective of the OS / ASAN?
 1. What's is the bug itself called, from the perspective of the C language?
 1. What is data structure `argv` called?  Why does the bug happen?
+
+(Note: beging precise about terminology may seem pedantic now.  But using
+precise words is helpful when say writing about a bug.)
 
 <!--
 This tests shell tool usage and reading C, but not writing C.

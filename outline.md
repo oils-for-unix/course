@@ -22,6 +22,26 @@ Reverse order.  We don't start with lexing and parsing; we *end* with parsing an
 
 ### Kernel Syscalls
 
+Shell runtime:
+
+- Simple Commands
+  - builtin
+  - external
+  - YSH procs / shell functions
+  - YSH funcs
+- Pipelines 
+- Command Sub
+- Process Sub
+- Subshell `fork` or `( )`
+
+And:
+
+- Redirects
+
+### Process State
+
+- What's inherited, what's not inherited?
+
 ### libc calls
 
 ### Data Languages / UTF-8
@@ -47,3 +67,30 @@ Reverse order.  We don't start with lexing and parsing; we *end* with parsing an
 ### UI
 
 Completion and history?  This is exterior again
+
+## Coding Tactics
+
+### Task Files
+
+- Externalizing your brain / thought processes
+- Automate everything: "no script is too small"
+  - semi-automation
+
+### Dependency Inversion
+
+(I make a distinction with "dependency injection", which implies a framework)
+
+- This is how we create testable and modular code 
+- No global variables, except in special cases, e.g.
+  - signal handlers are inherently process-global
+  - the GC heap is process global (although that could be changed)
+
+## Shell Concepts
+
+- Task Files
+- Bernstein chaining 
+- `$0` Dispatch pattern - sudo, xargs, find, etc.
+- Pipelines
+  - vectorized
+  - point-free
+  - imperative
