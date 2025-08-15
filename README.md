@@ -74,12 +74,26 @@ Create a new program with a **bug**:
 
     $ echo 'int main(int argc, char** argv) { if( *(argv[1]) ) return 1; return 42; }' > foo.c
 
-Now create a shell script `solutions/readme_c.sh`, with  2 lines of shell:
+Now, in this git repo, create a shell script `$YOUR_NAME/readme_c.sh`, with at
+least 3 lines of shell:
 
-1. One where the bug happens
-1. One where the bug does NOT happen
+1. Tickle the bug with ASAN on.
+1. Tickle the bug without ASAN.
+1. Avoid the bug
 
-<!-- this tests shell tool usage and reading C, but not writing C -->
+Conceptual questions / writing:
+
+1. What's the symptom of the bug called, from the perspective of the OS / ASAN?
+1. What's is the bug itself called, from the perspective of the C language?
+1. What is data structure `argv` called?  Why does the bug happen?
+
+<!--
+This tests shell tool usage and reading C, but not writing C.
+
+It's a null pointer dereference, which causes a seg fault.
+
+This is not really about memory safety.  If a null pointer dereference causes.
+-->
 
 ### 2. Normalize a Unix Path
 
@@ -110,7 +124,7 @@ this tests data structures, coding skills, and reasoning with test cases
 ### Publish Results
 
 1. Create a branch `solutions-$YOURNAME`
-1. `git add solutions/readme_*`
+1. `git add $YOUR_NAME/readme_*`
 1. `git push`.
 
 ## Topics
