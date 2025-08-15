@@ -53,33 +53,7 @@ The goal is to learn the concept/theory, rather than the specific technology.
 These two questions might help you figure out if you want to spend time on
 this.
 
-### 1. Normalize a Unix Path
-
-In this git repo, create a Python file `solutions/readme_path.py`.
-
-Write a Python function to normalize a Unix path (without using the
-standard library).
-
-Example:
-
-    /usr/local/bin/../../sbin/chroot -> /usr/sbin/chroot
-
-Template:
-
-    def norm(path_str):
-      # fill this in
-      return ''
-
-Hint: split the string by `/`, and use a list as a **stack**.
-
-Write concise unit tests that ensure the function is defined for **all** kinds
-of inputs.  You can also restrict inputs with assertions.
-
-<!-- 
-this tests data structures, coding skills, and reasoning with test cases
--->
-
-### Tickle a Bug in C Code
+### 1. Tickle a Bug in C Code
 
 Start with this shell to create and run a C program:
 
@@ -107,6 +81,32 @@ Now create a shell script `solutions/readme_c.sh`, with  2 lines of shell:
 
 <!-- this tests shell tool usage and reading C, but not writing C -->
 
+### 2. Normalize a Unix Path
+
+In this git repo, create a Python file `solutions/readme_path.py`.
+
+Write a Python function to normalize a Unix path (without using the
+standard library).
+
+Example:
+
+    /usr/local/bin/../../sbin/chroot -> /usr/sbin/chroot
+
+Template:
+
+    def norm(path_str):
+      # fill this in
+      return ''
+
+Hint: split the string by `/`, and use a list as a **stack**.
+
+Write concise unit tests that ensure the function is defined for **all** kinds
+of inputs.  You can also restrict inputs with assertions.
+
+<!-- 
+this tests data structures, coding skills, and reasoning with test cases
+-->
+
 ### Publish Results
 
 1. Create a branch `solutions-$YOURNAME`
@@ -115,4 +115,4 @@ Now create a shell script `solutions/readme_c.sh`, with  2 lines of shell:
 
 ## Topics
 
-See [outline.md]().
+See [outline.md](outline.md).
