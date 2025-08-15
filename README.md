@@ -1,22 +1,25 @@
 T4A: A Course on Operating Systems and Programming Languages
 ===
 
-Right now, this is just an idea for attracting new contributors to Oils.
+Right now, this is just an **idea** for attracting new contributors to Oils.
 
-(Should the course also be about writing?  I think writing helps spread the
-word.  And I also think that, contrary to some opinions, writing is objective.
+(Should the course also be about writing?  Writing could help spread the
+word.
 
-Typical problem: there could be too much material that takes too long.
-)
+And, not everyone may see this, but good writing is relatively **objective**.
+There are different styles of writing, but some writing is good
+and some is bad.
+
+Typical problem: there could be too much material that takes too long.)
 
 ---
 
-T4A stands for "theory and four actions".  This course is:
+T4A stands for "theory and four actions".  That means that this course is:
 
-- *Theory-oriented*
+- **Theory**-oriented
   - We introduce concepts with *words*, aiming to give **crisp definitions**
     that are *invariant* across technologies.
-- Then we aim to express **four** actions using **Unix shell**
+- Then we aim to express **four actions** using Unix **shell**
   - We may use **two** different technologies, like Python and C.  First we
     type the **wrong** thing, and then we come up with the **right** thing.  So
     that's a total of 4 actions:
@@ -26,13 +29,12 @@ T4A stands for "theory and four actions".  This course is:
   - (B, right)
 - Another way to test your understanding is to **write** for an audience.
 
-The goal is to learn the concept/theory, rather than the specific technology.
+This course will use shell, Python, and C, but the goal is to learn the
+concept/theory, rather than the specifics of these technologies.
 
 Notes:
 
 - On theory:
-  - This course will use shell, Python, and C, but the ideas are **not**
-    specific to those technologies.
   - If you feel overwhelmed by the "tech treadmill", learning theory can be an
     antidote.
   - These words and concepts that can aid communication with other engineers
@@ -43,12 +45,13 @@ Notes:
 
 ## Prerequisites
 
-- This course isn't for new programmers.  A quick test: if you have *not*
-  written production code in 2 different languages, this course won't be the
-  best use of your time.
+- This course isn't for new programmers.  A quick test: if you haven't written
+  production code in 2 different languages, then this course won't be the best
+  use of your time.
 - This course is shell-oriented, so you'll spend most time either in a terminal
-  or a plain text editor.  I think it can be a useful exercise for people who
-  prefer to code with IDEs, but this isn't universally true.
+  or a plain text editor.
+  - It can be a useful exercise for people who prefer to code with IDEs, but
+    it's up to you to decide that.
   - [Where Contributors Have Problems](https://github.com/oils-for-unix/oils/wiki/Where-Contributors-Have-Problems)
     has similar caveats.
 - A computer science education isn't a strict requirement, but the ideas are
@@ -106,6 +109,10 @@ It's a null pointer dereference, which causes a seg fault.
 
 This is not really about memory safety.  If a null pointer dereference causes.
 -->
+
+T4A TODO: construct a Rust program that triggers an ASAN error at runtime.  You
+may use `unsafe`, though you don't have to.  (Note: using LLM could be aa valid
+time-saver here?  You can probably query the LLM.)
 
 ### 2. Normalize a Unix Path
 
