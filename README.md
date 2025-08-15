@@ -64,18 +64,22 @@ Example:
 
     /usr/local/bin/../../sbin/chroot -> /usr/sbin/chroot
 
+Template:
+
     def norm(path_str):
       # fill this in
       return ''
 
-Hint: split the string by `/`, and use a list as a stack.
+Hint: split the string by `/`, and use a list as a **stack**.
 
-Write short unit tests that ensure the function is defined for **all** kinds of
-inputs.  You can also restrict inputs with assertions.
+Write concise unit tests that ensure the function is defined for **all** kinds
+of inputs.  You can also restrict inputs with assertions.
 
-<!-- this tests data structures and coding skills -->
+<!-- 
+this tests data structures, coding skills, and reasoning with test cases
+-->
 
-### Create Bugs in C
+### Tickle a Bug in C Code
 
 Start with this shell to create and run a C program:
 
@@ -84,7 +88,10 @@ Start with this shell to create and run a C program:
     $ gcc -o foo foo.c; ./foo; echo status=$?
     status=42
 
-Now add this flag to enable [Address Sanitizer][asan]:
+Now add this flag to enable [Address Sanitizer][asan], a tool that instruments
+C code at runtime:
+
+[asan]: https://github.com/google/sanitizers/wiki/AddressSanitizer
 
     $ gcc -fsanitize=address -o foo foo.c && ./foo; echo status=$?
     status=42
@@ -102,8 +109,9 @@ Now create a shell script `solutions/readme_c.sh`, with  2 lines of shell:
 
 ### Publish Results
 
-Create a branch `solutions-$YOURNAME`, and add `solutions/readme_*`, and `git
-push`.
+1. Create a branch `solutions-$YOURNAME`
+1. `git add solutions/readme_*`
+1. `git push`.
 
 ## Topics
 
